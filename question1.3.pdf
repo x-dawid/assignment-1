@@ -1,0 +1,59 @@
+define premium_seat:
+  
+  #make an array of how many rows and columns of seats there is
+  row = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R]
+  column = [1,2,3,4,5,6]
+  #initial row represnted by 0
+  i = 0
+  #inital seat represented by 0
+  j = 0 
+ #for loop to go through each row 1 by 1 
+ for i = 0 to 17
+    #for loop to go though each column 1 by 1
+    for j = 0 to 5
+      #seat is given by the row the and column the seat is in, row is given by a letter column is given by a number
+      seat = row[i] + column[j]
+      j = j + 1
+    i = i + 1
+
+#prompts user what seat they would like
+ premium_seat = input("what seat would you like to chose?")
+
+#prompts user for premium_seat again if chosen seat is occupied
+ while seat is occupied
+    premium_seat = input("seat unavailable, what seat would you like to chose?")
+  
+# set a variable repeat equal to 1 to create a while loop that if given a correct option for drink it returns the drink that person wants
+repeat = 1
+while repeat = 1:
+ drink = input("would you like tea, coffee, fruit juice, champagne?")
+ 
+ if drink == tea: 
+   print("your inflight drink is tea")
+   repeat = 0
+   return drink
+ 
+ else if drink == coffee:
+    print("your inflight drink is coffee")
+    repeat = 0
+    return drink
+ 
+ else if drink == fruit juice: 
+    print("your inflight drink is fruit juice")
+    repeat = 0
+    return drink
+ 
+ else if drink == champagne: 
+    age = input("how old are you?")
+      if age >= 18
+      repeat = 0
+      return drink
+      else if age < 18 
+        repeat = 1
+  else 
+    print("you must select a drink from list below")
+    repeat = 1
+
+
+  
+      
